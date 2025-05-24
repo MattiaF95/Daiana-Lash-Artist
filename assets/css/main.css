@@ -2400,3 +2400,12 @@ section#portfolio div.section-title p {
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+/* Widget prenotazioni */
+
+#sbw_giwswo {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 0;
+  display: block;
+}
