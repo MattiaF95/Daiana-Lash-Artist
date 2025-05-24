@@ -29,7 +29,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #ffffff;  /* The default color of the main navmenu links */
+  --nav-color: #f9f9f9;  /* The default color of the main navmenu links */
   --nav-hover-color: #532c1eff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #D6AA97ff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #D6AA97ff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -1230,6 +1230,10 @@ section#about {
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+section#portfolio div.section-title p {
+  color: var(--heading-color);
+}
+
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
@@ -1328,107 +1332,73 @@ section#about {
   bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Pricing Section
---------------------------------------------------------------*/
-.pricing .pricing-item {
-  background-color: var(--surface-color);
-  box-shadow: 0px 5px 90px rgba(0, 0, 0, 0.1);
-  padding: 40px 20px;
-  text-align: center;
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
+/*card prices*/
+
+#pricing {
+  background-color: var(--nav-color);
 }
 
-.pricing .pricing-item h3 {
-  padding: 15px;
-  margin-top: 15px;
-  font-size: 18px;
-  font-weight: 600;
+.pricing-card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
 }
 
-.pricing .pricing-item h4 {
-  color: var(--accent-color);
-  font-size: 42px;
-  font-family: var(--default-font);
-  font-weight: 500;
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.pricing .pricing-item h4 sup {
-  font-size: 20px;
-  top: -15px;
-  left: -3px;
+.pricing-header {
+    border-radius: 15px 15px 0 0;
+    color: white;
 }
 
-.pricing .pricing-item h4 span {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  font-size: 16px;
-  font-weight: 300;
+.lamination-header {
+    background: linear-gradient(45deg, #5c3324, #c26d4c);
 }
 
-.pricing .pricing-item ul {
-  padding: 20px 0;
-  list-style: none;
-  text-align: center;
-  line-height: 20px;
-  font-size: 14px;
+.lift-header {
+    background: linear-gradient(45deg, #3e1f0d, #c6a27a);
 }
 
-.pricing .pricing-item ul li {
-  padding-bottom: 16px;
+.extension-header {
+    background: linear-gradient(45deg, #4b2e28, #f5d9cc);
 }
 
-.pricing .pricing-item ul .na {
-  color: color-mix(in srgb, var(--default-color), transparent 60%);
-  text-decoration: line-through;
-}
-
-.pricing .pricing-item .btn-wrap {
-  padding: 15px;
-  text-align: center;
-}
-
-.pricing .pricing-item .btn-buy {
+.btn-custom {
   color: var(--accent-color);
   background-color: transparent;
   border: 2px solid var(--accent-color);
   display: inline-block;
   padding: 10px 40px 12px 40px;
   border-radius: 50px;
-  font-size: 14px;
+  font-size: 19px;
   font-family: var(--heading-font);
   font-weight: 600;
   transition: 0.3s;
 }
 
-.pricing .pricing-item .btn-buy:hover {
+.btn-custom:hover {
   background: var(--accent-color);
   color: var(--contrast-color);
 }
 
-.pricing .recommended .btn-buy {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+.feature-list {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-.pricing .recommended .btn-buy:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-  border-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+.feature-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e9ecef;
 }
 
-.pricing .recommended-badge {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  font-size: 13px;
-  padding: 3px 25px 6px 25px;
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  color: var(--accent-color);
-  border-radius: 50px;
+.feature-list li:last-child {
+    border-bottom: none;
 }
+
+/*---card prices---*/
 
 /*--------------------------------------------------------------
 # Faq Section
@@ -1585,86 +1555,6 @@ section#about {
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
   margin-bottom: 0;
-}
-
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
-.contact .info-item+.info-item {
-  margin-top: 40px;
-}
-
-.contact .info-item i {
-  color: var(--accent-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  font-size: 20px;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-  margin-right: 15px;
-}
-
-.contact .info-item h3 {
-  padding: 0;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
-.contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 14px;
-}
-
-.contact .info-item:hover i {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.contact .php-email-form {
-  height: 100%;
-}
-
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: var(--surface-color);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
-
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
 /*--------------------------------------------------------------
