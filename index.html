@@ -51,15 +51,6 @@
   <link href="assets/css/main.css" rel="stylesheet" />
   <script src="/assets/js/main.js" defer></script>
   <script src="/assets/js/widget.js" defer></script>
-
-  <!-- Template info -->
-  <!--
-  * Template Name: KnightOne
-  * Template URL: https://bootstrapmade.com/knight-simple-one-page-bootstrap-template/
-  * Updated: Oct 16 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  -->
 </head>
 
 
@@ -102,32 +93,27 @@
           <li><a href="#portfolio">Lavori</a></li>
           <li><a href="#pricing">Prezzi</a></li>
           <!--<li><a href="blog.html">Blog</a></li>
-            <li class="dropdown">
-              <a href="#"
-                ><span>Dropdown</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i
-              ></a>
-              <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown">
-                  <a href="#"
-                    ><span>Deep Dropdown</span>
-                    <i class="bi bi-chevron-down toggle-dropdown"></i
-                  ></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
-              </ul>
-            </li>-->
-          <li><a href="#contact">Contatti</a></li>
+          <li class="dropdown">
+            <a href="#"><span>Dropdown</span>
+              <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown">
+                <a href="#"><span>Deep Dropdown</span>
+                  <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>-->
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -169,7 +155,7 @@
         <div class="row gy-4">
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
             <p>
-              Ciao, sono <strong>Daiana Meme</strong>, lashmaker specializzata
+              Sono <strong>Daiana Memè</strong>, lashmaker specializzata
               nell&#39;arte dello sguardo. <br />Ogni giorno aiuto donne a
               sentirsi più sicure, belle e valorizzate grazie a
               <strong>trattamenti professionali</strong> per ciglia pensati su
@@ -432,15 +418,16 @@
       <!-- End Section Title -->
 
       <div class="container">
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="isotope-layout" data-default-filter=".filter-volume-soft" data-layout="masonry"
+          data-sort="original-order">
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter="*">All</li>
             <li data-filter=".filter-laminazione">Laminazione</li>
             <li data-filter=".filter-one-to-one">One-to-one</li>
             <li data-filter=".filter-wet">Wet</li>
             <li data-filter=".filter-mega-volume">Mega volume</li>
             <li data-filter=".filter-effetto-parziale">Effetto parziale</li>
-            <li data-filter=".filter-volume-soft">Volume soft</li>
+            <li data-filter=".filter-volume-soft" class="filter-active">Volume soft</li>
           </ul>
           <!-- End Portfolio Filters -->
 
@@ -653,7 +640,7 @@
                 <h3 class="card-title text-center mb-0">Laminazione sopracciglia</h3>
               </div>
               <div class="card-body p-4">
-                <h2 class="card-title text-center mb-4">50 &euro;</h2>
+                <h2 class="card-title text-center mb-4">30 &euro;</h2>
                 <ul class="feature-list text-center mb-4">
                   <li>Rende le sopracciglia più ordinate e definite.</li>
                   <li>Dona volume anche a quelle più sottili.</li>
@@ -676,7 +663,7 @@
                 <h3 class="card-title text-center mb-0">Laminazione ciglia</h3>
               </div>
               <div class="card-body p-4">
-                <h2 class="card-title text-center mb-4">70 &euro;</h2>
+                <h2 class="card-title text-center mb-4">50 &euro;</h2>
                 <ul class="feature-list text-center mb-4">
                   <li>Ciglia più curve e definite</li>
                   <li>Effetto naturale ma evidente</li>
@@ -699,7 +686,7 @@
                 <h3 class="card-title text-center mb-0">Extension ciglia</h3>
               </div>
               <div class="card-body p-4">
-                <h2 class="card-title text-center mb-4">110 &euro;</h2>
+                <h2 class="card-title text-center mb-4"><sub>da</sub> 70 &euro;</h2>
                 <ul class="feature-list text-center mb-4">
                   <li>Ciglia perfette senza bisogno di trucco quotidiano</li>
                   <li>Aspetto naturale e raffinato</li>
@@ -891,8 +878,6 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
