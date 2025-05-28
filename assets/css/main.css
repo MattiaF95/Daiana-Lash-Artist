@@ -924,6 +924,48 @@ section,
   }
 }
 
+.btn-booking {
+  position: relative;
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #c26d4c, #5c3324);
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0 0 0 transparent;
+}
+
+.btn-booking:hover {
+  background: linear-gradient(135deg, #5c3324, #c26d4c);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(194, 109, 76, 0.6);
+  color: #fff;
+}
+
+.pulse {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(194, 109, 76, 0.4);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 12px rgba(194, 109, 76, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(194, 109, 76, 0.4);
+  }
+}
+
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -933,7 +975,7 @@ section#about {
 
 
 .about ul {
-  list-style-type: disc;
+  list-style: none;
   padding: 2%;
 }
 
@@ -1135,25 +1177,12 @@ section#about {
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
-.clients .clients-wrap {
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  border-left: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+section#clients {
+  background-color: var(--contrast-color);
 }
 
-.clients .client-logo {
-  background-color: var(--surface-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  overflow: hidden;
-}
-
-.clients .client-logo img {
-  padding: 50px;
-  max-width: 80%;
-  transition: 0.3s;
+.clients h3 {
+  font-size: 2.5em;
 }
 
 @media (max-width: 640px) {
@@ -1161,10 +1190,6 @@ section#about {
     padding: 30px;
     max-width: 50%;
   }
-}
-
-.clients .client-logo:hover img {
-  transform: scale(1.1);
 }
 
 /*--------------------------------------------------------------
@@ -1332,7 +1357,7 @@ section#portfolio div.section-title p {
   bottom: 0;
 }
 
-/*card prices*/
+/*Section card prices*/
 
 #pricing {
   background-color: var(--nav-color);
@@ -1382,6 +1407,14 @@ section#portfolio div.section-title p {
 .btn-custom:hover {
   background-color: var(--accent-color);
   color: var(--contrast-color);
+  border: var(--accent-color);
+}
+
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom:focus:active {
+  background-color: var(--contrast-color);
+  color: var(--accent-color);
   border: var(--accent-color);
 }
 
