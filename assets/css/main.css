@@ -1,15 +1,4 @@
-/**
-* Template Name: KnightOne
-* Template URL: https://bootstrapmade.com/knight-simple-one-page-bootstrap-template/
-* Updated: Oct 16 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -1028,12 +1017,12 @@ section#about {
 }
 
 .services .service-item {
-  background-color: var(--surface-color);
+  background-color: var(--nav-color);
   box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
   padding: 60px 30px;
   transition: all ease-in-out 0.3s;
   border-radius: 18px;
-  border-bottom: 5px solid var(--surface-color);
+  border-bottom: 5px solid var(--contrast-color);
   height: 100%;
 }
 
@@ -1555,6 +1544,10 @@ section#portfolio div.section-title p {
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
+section#portfolio {
+  background-color: var(--nav-color);
+}
+
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }
@@ -1794,12 +1787,6 @@ section#portfolio div.section-title p {
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-/* Add your styles here */
-
-
-/*--------------------------------------------------------------
 # Blog Posts Section
 --------------------------------------------------------------*/
 .blog-posts article {
@@ -1858,7 +1845,7 @@ section#portfolio div.section-title p {
 
 /*--------------------------------------------------------------
 # Blog Pagination Section
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .blog-pagination {
   padding-top: 0;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
@@ -1900,7 +1887,7 @@ section#portfolio div.section-title p {
 
 /*--------------------------------------------------------------
 # Blog Details Section
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .blog-details {
   padding-bottom: 30px;
 }
@@ -2053,7 +2040,7 @@ section#portfolio div.section-title p {
 
 /*--------------------------------------------------------------
 # Blog Comments Section
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .blog-comments {
   padding: 10px 0;
 }
@@ -2110,90 +2097,10 @@ section#portfolio div.section-title p {
   padding-left: 40px;
 }
 
-/*--------------------------------------------------------------
-# Comment Form Section
---------------------------------------------------------------*/
-.comment-form {
-  padding-top: 10px;
-}
-
-.comment-form form {
-  background-color: var(--surface-color);
-  margin-top: 30px;
-  padding: 30px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-.comment-form form h4 {
-  font-weight: bold;
-  font-size: 22px;
-}
-
-.comment-form form p {
-  font-size: 14px;
-}
-
-.comment-form form input {
-  background-color: var(--surface-color);
-  color: var(--default-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
-  font-size: 14px;
-  border-radius: 4px;
-  padding: 10px 10px;
-}
-
-.comment-form form input:focus {
-  color: var(--default-color);
-  background-color: var(--surface-color);
-  box-shadow: none;
-  border-color: var(--accent-color);
-}
-
-.comment-form form input::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-}
-
-.comment-form form textarea {
-  background-color: var(--surface-color);
-  color: var(--default-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
-  border-radius: 4px;
-  padding: 10px 10px;
-  font-size: 14px;
-  height: 120px;
-}
-
-.comment-form form textarea:focus {
-  color: var(--default-color);
-  box-shadow: none;
-  border-color: var(--accent-color);
-  background-color: var(--surface-color);
-}
-
-.comment-form form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-}
-
-.comment-form form .form-group {
-  margin-bottom: 25px;
-}
-
-.comment-form form .btn-primary {
-  border-radius: 4px;
-  padding: 10px 20px;
-  border: 0;
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.comment-form form .btn-primary:hover {
-  color: var(--contrast-color);
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
 
 /*--------------------------------------------------------------
 # Widgets
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .widgets-container {
   background-color: var(--surface-color);
   padding: 30px;
