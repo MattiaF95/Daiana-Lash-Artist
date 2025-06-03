@@ -2310,3 +2310,30 @@ section#portfolio {
   line-height: 0;
   display: block;
 }
+
+/* terms and condition */
+
+#terms-and-conditions-section .container{
+  background-color: var(--nav-color);
+  margin-top: 5%;
+  padding: 2%;
+} 
+
+#terms-and-conditions-section .container p {
+  padding-left: 3%;
+}
+
+#terms-and-conditions-section .container ul {
+  padding-left: 6%;
+}
+
+div#link-terms a {
+  color: var(--contrast-color);
+}
+
+
+
+
+
+
+
