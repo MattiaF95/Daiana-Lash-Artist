@@ -2441,11 +2441,3 @@ div#link-terms a {
 div#link-terms a:hover {
   text-decoration: underline;
 }
-
-/* fix spazi isotope su mobile */
-/*--------------------------------------------------------------*/
-@media (max-width: 768px) {
-  .isotope-item:not(:first-child) {
-    margin-bottom: 20px;
-  }
-}
