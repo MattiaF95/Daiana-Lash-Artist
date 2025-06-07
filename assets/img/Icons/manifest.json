@@ -1,0 +1,20 @@
+{
+  "name": "Daiana Lash Artist",
+  "short_name": "Daiana Lashes",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#d4a18b",
+  "theme_color": "#5b2b17",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
