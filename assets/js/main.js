@@ -170,6 +170,17 @@
       });
     });
 
+  const toggleBtn = document.getElementById("toggleFaqBtn");
+  const extraFaq = document.getElementById("extraFaq");
+  let isVisible = false;
+
+  toggleBtn.addEventListener("click", () => {
+    isVisible = !isVisible;
+    extraFaq.classList.toggle("d-none", !isVisible);
+    toggleBtn.innerText = isVisible
+      ? "Nascondi domande extra"
+      : "Mostra altre domande";
+  });
   /**
    * Init swiper sliders
    */

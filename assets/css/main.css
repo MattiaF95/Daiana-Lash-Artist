@@ -259,6 +259,7 @@ h6 {
 
 /* PHP Email Form Messages
 ------------------------------*/
+/*
 .php-email-form .error-message {
   display: none;
   background: #df1529;
@@ -308,7 +309,7 @@ h6 {
     transform: rotate(360deg);
   }
 }
-
+*/
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -1448,83 +1449,6 @@ section#portfolio div.section-title p {
   bottom: 0;
 }
 
-/*Section card prices*/
-
-#pricing {
-  background-color: var(--nav-color);
-}
-
-.pricing-card {
-    border: none;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-}
-
-.pricing-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.pricing-header {
-    border-radius: 15px 15px 0 0;
-    color: white;
-}
-
-.lamination-header {
-    background: linear-gradient(45deg, #5c3324, #c26d4c);
-}
-
-.lift-header {
-    background: linear-gradient(45deg, #3e1f0d, #c6a27a);
-}
-
-.extension-header {
-    background: linear-gradient(45deg, #4b2e28, #f5d9cc);
-}
-
-.btn-custom {
-  color: var(--accent-color);
-  background-color: transparent;
-  border: 2px solid var(--accent-color);
-  display: inline-block;
-  padding: 10px 40px 12px 40px;
-  border-radius: 50px;
-  font-size: 19px;
-  font-family: var(--heading-font);
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn-custom:hover {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  border: var(--accent-color);
-}
-
-.btn-custom:focus,
-.btn-custom:active,
-.btn-custom:focus:active {
-  background-color: var(--contrast-color);
-  color: var(--accent-color);
-  border: var(--accent-color);
-}
-
-.feature-list {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.feature-list li {
-    padding: 8px 0;
-    border-bottom: 1px solid #e9ecef;
-}
-
-.feature-list li:last-child {
-    border-bottom: none;
-}
-
-/*---card prices---*/
-
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
@@ -1585,6 +1509,19 @@ section#portfolio div.section-title p {
 .faq .faq-container {
   margin-top: 15px;
 }
+
+button#toggleFaqBtn {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border-radius: 50px;
+  border-color: var(--accent-color);
+}
+
+button#toggleFaqBtn:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+}
+
 
 /*--------------------------------------------------------------
 # Recent Posts Section
