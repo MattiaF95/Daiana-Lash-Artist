@@ -149,6 +149,79 @@
       });
   });
 
+  /* ---- TEST ----- */
+
+  // Salva l'istanza di Isotope globalmente
+  // let isotopeInstances = new Map();
+
+  // function initIsotopeLayout() {
+  //   document.querySelectorAll(".isotope-layout").forEach(function (isotopeItem) {
+  //     let layout = isotopeItem.getAttribute("data-layout") ?? "masonry";
+  //     let filter = isotopeItem.getAttribute("data-default-filter") ?? "*";
+  //     let sort = isotopeItem.getAttribute("data-sort") ?? "original-order";
+
+  //     let initIsotope;
+  //     imagesLoaded(isotopeItem.querySelector(".isotope-container"), function () {
+  //       initIsotope = new Isotope(
+  //         isotopeItem.querySelector(".isotope-container"),
+  //         {
+  //           itemSelector: ".isotope-item",
+  //           layoutMode: layout,
+  //           filter: filter,
+  //           sortBy: sort,
+  //         }
+  //       );
+
+  //       // Salva l'istanza
+  //       isotopeInstances.set(isotopeItem, initIsotope);
+  //     });
+
+  //     isotopeItem
+  //       .querySelectorAll(".isotope-filters li")
+  //       .forEach(function (filters) {
+  //         filters.addEventListener(
+  //           "click",
+  //           function () {
+  //             isotopeItem
+  //               .querySelector(".isotope-filters .filter-active")
+  //               .classList.remove("filter-active");
+  //             this.classList.add("filter-active");
+
+  //             // Usa l'istanza salvata
+  //             const instance = isotopeInstances.get(isotopeItem);
+  //             if (instance) {
+  //               instance.arrange({
+  //                 filter: this.getAttribute("data-filter"),
+  //               });
+  //             }
+
+  //             if (typeof aosInit === "function") {
+  //               aosInit();
+  //             }
+  //           },
+  //           false
+  //         );
+  //       });
+  //   });
+  // }
+
+  // // Inizializza al caricamento
+  // initIsotopeLayout();
+
+  // // Funzione da chiamare dopo aver aggiunto le immagini
+  // window.reinitIsotope = function () {
+  //   // Distruggi le istanze precedenti
+  //   isotopeInstances.forEach(instance => {
+  //     instance.destroy();
+  //   });
+  //   isotopeInstances.clear();
+
+  //   // Reinizializza
+  //   initIsotopeLayout();
+  // };
+
+  /*--- END TEST ---*/
+
   /**
    * Frequently Asked Questions Toggle
    */

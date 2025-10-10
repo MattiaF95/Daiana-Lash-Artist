@@ -1,0 +1,21 @@
+{
+  "name": "daiana-lash-artist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/json-generated.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattiaF95/Daiana-Lash-Artist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MattiaF95/Daiana-Lash-Artist/issues"
+  },
+  "homepage": "https://github.com/MattiaF95/Daiana-Lash-Artist#readme"
+}
