@@ -13,6 +13,27 @@ RewriteEngine On
 # Rimuove il percorso /assets/html/
 RewriteRule ^terms-conditions/?$ src/assets/html/terms-conditions.html [L]
 
+# Blocca accesso a .git
+<DirectoryMatch "^.*\.git">
+    Require all denied
+</DirectoryMatch>
+
+# Blocca accesso a file o cartelle xmrig
+<DirectoryMatch "^.*xmrig">
+    Require all denied
+</DirectoryMatch>
+
+# Blocca tutti i file nascosti che iniziano con punto
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Impedisce download di backup o archivi
+<FilesMatch "\.(bak|old|zip|tar\.gz|tar)$">
+    Require all denied
+</FilesMatch>
+
+
 # Abilita compressione GZIP
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml
