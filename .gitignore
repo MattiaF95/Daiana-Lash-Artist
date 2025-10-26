@@ -1,5 +1,5 @@
 .vscode/
 .github/
 node_modules/
-.git, 
-/xmrig
+.git/
+xmrig/
