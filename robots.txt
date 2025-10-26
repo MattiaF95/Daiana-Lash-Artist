@@ -1,4 +1,42 @@
 User-agent: *
-Disallow:
 
-Sitemap: https://daianalashartist.it/sitemap.xml
+# Consenti solo home e termini
+Allow: /
+Allow: /terms-conditions
+
+# Blocca tutto il resto
+Disallow: /src/
+Disallow: /cgi-bin/
+Disallow: /.git/
+Disallow: /backup/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /uploads/
+
+# Blocca file sensibili
+Disallow: /*.log$
+Disallow: /*.sql$
+Disallow: /*.zip$
+Disallow: /*.tar$
+Disallow: /*.gz$
+Disallow: /*.bak$
+Disallow: /*.old$
+Disallow: /*.env$
+Disallow: /*.config$
+
+# Blocca bot malevoli comuni
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap: https://daianalashartist.it/sitemap.xml

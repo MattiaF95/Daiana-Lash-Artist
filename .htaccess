@@ -1,3 +1,4 @@
+# Abilita mod_rewrite
 RewriteEngine On
 
 # Forza HTTPS
@@ -8,59 +9,66 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
-RewriteEngine On
+# Imposta src/index.html come pagina principale
+DirectoryIndex src/index.html
 
-# Rimuove il percorso /assets/html/
-RewriteRule ^terms-conditions/?$ src/assets/html/terms-conditions.html [L]
+# Blocca listing directory
+Options -Indexes
 
-# Blocca accesso a .git
+# Pagina di errore 404 personalizzata
+ErrorDocument 404 /src/404.html
+
+# Rewrite per termini e condizioni
+RewriteRule ^terms-conditions/?$ src/html/terms-conditions.html [L]
+
+# Blocca accesso a cartelle .git
 <DirectoryMatch "^.*\.git">
     Require all denied
 </DirectoryMatch>
 
-# Blocca accesso a file o cartelle xmrig
-<DirectoryMatch "^.*xmrig">
-    Require all denied
-</DirectoryMatch>
-
-# Blocca tutti i file nascosti che iniziano con punto
+# Blocca file nascosti (iniziano con punto)
 <FilesMatch "^\.">
     Require all denied
 </FilesMatch>
 
-# Impedisce download di backup o archivi
-<FilesMatch "\.(bak|old|zip|tar\.gz|tar)$">
+# Blocca file di backup, archivi e file sensibili
+<FilesMatch "\.(bak|old|zip|tar\.gz|tar|log|sql|env|config|ini)$">
     Require all denied
 </FilesMatch>
 
+# Blocca file PHP (non necessari per sito statico)
+<FilesMatch "\.(php|php3|php4|php5|phtml|phps)$">
+    Require all denied
+</FilesMatch>
 
-# Abilita compressione GZIP
+# Blocca esecuzione script in cartelle upload/assets (se ne hai)
+<Directory "*/uploads">
+    php_flag engine off
+    RemoveHandler .php .phtml .php3
+    RemoveType .php .phtml .php3
+</Directory>
+
+# Compressione GZIP
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
 </IfModule>
 
-# Cache per contenuti statici
+# Cache per immagini e asset statici
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType image/webp "access plus 6 months"
   ExpiresByType image/jpeg "access plus 6 months"
   ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
-</IfModule>
-
-<IfModule mod_expires.c>
-  ExpiresActive On
   ExpiresByType font/woff2 "access plus 1 year"
   ExpiresByType font/woff "access plus 1 year"
-  ExpiresByType font/ttf "access plus 1 year"
-  ExpiresByType font/otf "access plus 1 year"
-  ExpiresByType application/font-woff2 "access plus 1 year"
 </IfModule>
 
+# Header cache per font
 <IfModule mod_headers.c>
   <FilesMatch "\.(woff|woff2|ttf|otf)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 </IfModule>
-
