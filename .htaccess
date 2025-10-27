@@ -1,74 +1,76 @@
-# Abilita mod_rewrite
 RewriteEngine On
 
 # Forza HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Redirect www → senza www
+# Redirect www → non-www
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
-# Imposta src/index.html come pagina principale
-DirectoryIndex src/index.html
+# Rewrite termini (URL pulito)
+RewriteRule ^terms-conditions/?$ src/html/terms-conditions.html [L]
+
+# Serve index dalla root
+RewriteRule ^$ src/index.html [L]
+
+# 404 personalizzata
+ErrorDocument 404 /src/404.html
 
 # Blocca listing directory
 Options -Indexes
 
-# Pagina di errore 404 personalizzata
-ErrorDocument 404 /src/404.html
-
-# Rewrite per termini e condizioni
-RewriteRule ^terms-conditions/?$ src/html/terms-conditions.html [L]
-
-# Blocca accesso a cartelle .git
-<DirectoryMatch "^.*\.git">
-    Require all denied
-</DirectoryMatch>
-
-# Blocca file nascosti (iniziano con punto)
+# Blocco file sensibili
 <FilesMatch "^\.">
-    Require all denied
+    Order allow,deny
+    Deny from all
 </FilesMatch>
 
-# Blocca file di backup, archivi e file sensibili
-<FilesMatch "\.(bak|old|zip|tar\.gz|tar|log|sql|env|config|ini)$">
-    Require all denied
+<FilesMatch "\.(bak|old|zip|tar|log|sql|env|config|ini|sh)$">
+    Order allow,deny
+    Deny from all
 </FilesMatch>
 
-# Blocca file PHP (non necessari per sito statico)
-<FilesMatch "\.(php|php3|php4|php5|phtml|phps)$">
-    Require all denied
+# Blocco PHP (sito statico)
+<FilesMatch "\.(php|php3|php4|php5|phtml)$">
+    Order allow,deny
+    Deny from all
 </FilesMatch>
-
-# Blocca esecuzione script in cartelle upload/assets (se ne hai)
-<Directory "*/uploads">
-    php_flag engine off
-    RemoveHandler .php .phtml .php3
-    RemoveType .php .phtml .php3
-</Directory>
 
 # Compressione GZIP
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
 </IfModule>
 
-# Cache per immagini e asset statici
+# Cache browser
 <IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType image/webp "access plus 6 months"
-  ExpiresByType image/jpeg "access plus 6 months"
-  ExpiresByType image/png "access plus 6 months"
-  ExpiresByType image/svg+xml "access plus 6 months"
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
-  ExpiresByType font/woff2 "access plus 1 year"
-  ExpiresByType font/woff "access plus 1 year"
+    ExpiresActive On
+    ExpiresByType image/webp "access plus 6 months"
+    ExpiresByType image/jpeg "access plus 6 months"
+    ExpiresByType image/png "access plus 6 months"
+    ExpiresByType image/svg+xml "access plus 3 months"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>
 
-# Header cache per font
+# Header di sicurezza
 <IfModule mod_headers.c>
-  <FilesMatch "\.(woff|woff2|ttf|otf)$">
-    Header set Cache-Control "public, max-age=31536000, immutable"
-  </FilesMatch>
+    # Previeni clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # Proteggi da MIME sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Abilita XSS filter
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Referrer policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Cache immutabile per font
+    <FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
 </IfModule>
+

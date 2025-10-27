@@ -1,32 +1,17 @@
+# robots.txt per daianalashartist.it
+
 User-agent: *
-
-# Consenti solo home e termini
 Allow: /
-Allow: /terms-conditions
 
-# Blocca tutto il resto
+# Blocca cartelle interne
 Disallow: /src/
 Disallow: /cgi-bin/
 Disallow: /.git/
 Disallow: /backup/
 Disallow: /tmp/
 Disallow: /admin/
-Disallow: /wp-admin/
-Disallow: /wp-includes/
-Disallow: /uploads/
 
-# Blocca file sensibili
-Disallow: /*.log$
-Disallow: /*.sql$
-Disallow: /*.zip$
-Disallow: /*.tar$
-Disallow: /*.gz$
-Disallow: /*.bak$
-Disallow: /*.old$
-Disallow: /*.env$
-Disallow: /*.config$
-
-# Blocca bot malevoli comuni
+# Blocca bot aggressivi
 User-agent: AhrefsBot
 Disallow: /
 
@@ -39,4 +24,7 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
-# Sitemap: https://daianalashartist.it/sitemap.xml
+User-agent: BLEXBot
+Disallow: /
+
+Sitemap: https://daianalashartist.it/sitemap.xml
