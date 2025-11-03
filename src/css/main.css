@@ -2,7 +2,7 @@
 /* roboto */
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/roboto/roboto-v47-latin-regular.woff2') format('woff2');
+  src: url('../assets/fonts/roboto/roboto-v47-latin-regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/roboto/roboto-v47-latin-italic.woff2') format('woff2');
+  src: url('../assets/fonts/roboto/roboto-v47-latin-italic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/roboto/roboto-v47-latin-700.woff2') format('woff2');
+  src: url('../assets/fonts/roboto/roboto-v47-latin-700.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/roboto/roboto-v47-latin-700italic.woff2') format('woff2');
+  src: url('../assets/fonts/roboto/roboto-v47-latin-700italic.woff2') format('woff2');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -36,7 +36,7 @@
 /* ralewey */
 @font-face {
   font-family: 'Raleway';
-  src: url('../fonts/raleway/raleway-v36-latin-regular.woff2') format('woff2');
+  src: url('../assets/fonts/raleway/raleway-v36-latin-regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -44,7 +44,7 @@
 
 @font-face {
   font-family: 'Raleway';
-  src: url('../fonts/raleway/raleway-v36-latin-italic.woff2') format('woff2');
+  src: url('../assets/fonts/raleway/raleway-v36-latin-italic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -52,7 +52,7 @@
 
 @font-face {
   font-family: 'Raleway';
-  src: url('../fonts/raleway/raleway-v36-latin-700.woff2') format('woff2');
+  src: url('../assets/fonts/raleway/raleway-v36-latin-700.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -60,7 +60,7 @@
 
 @font-face {
   font-family: 'Raleway';
-  src: url('../fonts/raleway/raleway-v36-latin-700italic.woff2') format('woff2');
+  src: url('../assets/fonts/raleway/raleway-v36-latin-700italic.woff2') format('woff2');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -69,7 +69,7 @@
 /* poppins */
 @font-face {
   font-family: 'Poppins';
-  src: url('../fonts/poppins/poppins-v23-latin-regular.woff2') format('woff2');
+  src: url('../assets/fonts/poppins/poppins-v23-latin-regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -77,7 +77,7 @@
 
 @font-face {
   font-family: 'Poppins';
-  src: url('../fonts/poppins/poppins-v23-latin-italic.woff2') format('woff2');
+  src: url('../assets/fonts/poppins/poppins-v23-latin-italic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -85,7 +85,7 @@
 
 @font-face {
   font-family: 'Poppins';
-  src: url('../fonts/poppins/poppins-v23-latin-700.woff2') format('woff2');
+  src: url('../assets/fonts/poppins/poppins-v23-latin-700.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -93,7 +93,7 @@
 
 @font-face {
   font-family: 'Poppins';
-  src: url('../fonts/poppins/poppins-v23-latin-700italic.woff2') format('woff2');
+  src: url('../assets/fonts/poppins/poppins-v23-latin-700italic.woff2') format('woff2');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -105,26 +105,22 @@
   --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway", sans-serif;
   --nav-font: "Poppins", sans-serif;
-}
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root {
   --background-color: #D6AA97ff;
   /* Background color for the entire website, including individual sections */
   --default-color: #38160dff;
   /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #6e4230ff;
+  --heading-color: #6e4230;
   /* Color for headings, subheadings and title throughout the website */
   --accent-color: #5c3324ff;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: rgb(241, 199, 181);
+  --surface-color: #f1c7b5;
   /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff;
   /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-}
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-:root {
+  /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
   --nav-color: #f9f9f9;
   /* The default color of the main navmenu links */
   --nav-hover-color: #532c1eff;
@@ -137,6 +133,11 @@
   /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #532c1eff;
   /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+
+  /* Smooth scroll */
+
+  scroll-behavior: smooth;
+
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -152,11 +153,6 @@
   --heading-color: #ffffff;
   --surface-color: #252525;
   --contrast-color: #ffffff;
-}
-
-/* Smooth scroll */
-:root {
-  scroll-behavior: smooth;
 }
 
 /*--------------------------------------------------------------
@@ -206,7 +202,6 @@ h6 {
   position: absolute;
   width: 120px;
   height: 120px;
-  animation-delay: 0s;
   animation: pulsate-play-btn 2s;
   animation-direction: forwards;
   animation-iteration-count: infinite;
@@ -1012,7 +1007,7 @@ section,
   font-size: 1.1rem;
   font-weight: 600;
   color: #fff;
-  background: linear-gradient(135deg, #c26d4c, #5c3324);
+  background: linear-gradient(135deg, #a4512b, #3a1e14);
   border: none;
   border-radius: 50px;
   text-transform: uppercase;

@@ -2,6 +2,16 @@
 <html lang="it">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWQBCQRF5J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-MWQBCQRF5J');
+  </script>
+  <!-- End Google tag (gtag.js) -->
   <script>
     var _iub = _iub || [];
     _iub.csConfiguration = { "siteId": 4053556, "cookiePolicyId": 86316037, "lang": "it", "storage": { "useSiteId": true } };
@@ -10,12 +20,12 @@
   <script type="module" async src="//cdn.iubenda.com/cs/stable/iubenda_cs.js"></script>
   <meta charset="utf-8">
   <base href="/src/">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Extension Ciglia Roma | Daiana Lash Artist</title>
 
   <meta name="author" content="Daiana Memè">
   <meta name="description"
-    content="Extension e laminazione ciglia a Roma con Daiana Lash Artist. Trattamenti professionali per uno sguardo intenso e curato. Prenota ora!">
+    content="Extension e laminazione ciglia a Roma Baldo degli Ubaldi con Daiana Lash Artist. Trattamenti professionali per uno sguardo intenso e curato. Prenota ora!">
   <meta name="keywords"
     content="extension ciglia Roma, laminazione ciglia Roma, lashlift Roma, lash artist Roma, volume ciglia, mega volume, effetto Kim, effetto Kylie, ciglia perfette Roma">
   <meta name="robots" content="index, follow">
@@ -52,20 +62,15 @@
 
   <!-- Main CSS and JS File -->
   <link href="css/main.css" rel="stylesheet">
-  <script type="module" src="js/main.js"></script>
-  <script type="module" src="js/widget.js"></script>
-  <script type="module" src="https://cdn.iubenda.com/iubenda.js"></script>
-
-  <!-- Google tag (gtag.js) -->
-  <script type="module" async src="https://www.googletagmanager.com/gtag/js?id=AW-17215603017"></script>
-  <script type="module" async src="js/gtag.js"></script>
+  <script type="module" src="js/main.js" defer></script>
+  <script type="module" src="js/widget.js" defer></script>
+  <script type="module" src="https://cdn.iubenda.com/iubenda.js" defer></script>
 </head>
 
 <body class="index-page">
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
       <a href="/#" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!--<img src="assets/img/logo.png" alt="">-->
         <h1 class="sitename">
           <svg id="svg-header-logo" viewBox="200 100 500 100" preserveAspectRatio="xMidYMid meet"
             xmlns="http://www.w3.org/2000/svg">
@@ -79,7 +84,6 @@
             <line x1="230" y1="155" x2="630" y2="155" class="line-logo animate-line-logo" />
 
             <!-- Testo LASH ARTIST che scende dall'alto sulla destra -->
-            <!-- Usando dominant-baseline="hanging" in modo che y rappresenti il bordo superiore -->
             <g class="animate-secondary-text">
               <text x="550" y="115" dominant-baseline="hanging" class="lash-artist">
                 LASH
@@ -99,29 +103,6 @@
           <li><a href="/#services">Servizi</a></li>
           <li><a href="/#portfolio">Lavori</a></li>
           <li><a href="/#faq">Faq</a></li>
-          <!--<li><a href="/#pricing">Prezzi</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown">
-            <a href="/#"><span>Dropdown</span>
-              <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="/#">Dropdown 1</a></li>
-              <li class="dropdown">
-                <a href="/#"><span>Deep Dropdown</span>
-                  <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="/#">Deep Dropdown 1</a></li>
-                  <li><a href="/#">Deep Dropdown 2</a></li>
-                  <li><a href="/#">Deep Dropdown 3</a></li>
-                  <li><a href="/#">Deep Dropdown 4</a></li>
-                  <li><a href="/#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="/#">Dropdown 2</a></li>
-              <li><a href="/#">Dropdown 3</a></li>
-              <li><a href="/#">Dropdown 4</a></li>
-            </ul>
-          </li>-->
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -218,7 +199,6 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <img src="assets/img/daiana-photo.webp" alt="Foto di daiana con trofeo" loading="lazy" class="img-fluid">
-            <!--<a href="/#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>-->
           </div>
         </div>
       </div>
@@ -1092,7 +1072,10 @@
     <!-- /Faq Section -->
 
     <!-- Widget appuntamenti -->
-    <div id="sbw_giwswo"></div>
+    <!--<div id="sbw_giwswo"></div>-->
+    <script src="https://cdn.supersaas.net/widget.js"></script>
+    <script class="supersaas-widget">var supersaas = new SuperSaaS("604346:Daiana_Lash_Artist", "801440:TRATTAMENTI", { "widget_type": "frame", "autoselect": "first_available", "domain": "www.supersaas.it" })
+    </script>
     <!-- /Widget appuntamenti -->
 
     <!-- Widget contatti -->
